@@ -72,7 +72,7 @@ class NetStat:
         csvFile = open("csvOutput.txt", 'wt')
         try:
             writer = csv.writer(csvFile, quoting=csv.QUOTE_ALL)
-            writer.writerow( ("PID","LADDR","RADDR","STATUS") )
+            writer.writerow( ("pid","laddr","raddr","status") )
             for i in range(len(sortedCSVList)):
                 splitRow = str(sortedCSVList[i]).split('/')
                 writer.writerow( (splitRow[0].strip("('"),
